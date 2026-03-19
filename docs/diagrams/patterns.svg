@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <style>
+    .box { fill: #f5f5f5; stroke: #333; stroke-width: 2; rx: 10; ry: 10; }
+    .title { font: 700 18px Arial, sans-serif; }
+    .text { font: 14px Arial, sans-serif; }
+    .line { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .dashed { stroke-dasharray: 7 5; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="40" y="40" width="280" height="120" />
+  <text class="title" x="60" y="75">Authenticator</text>
+  <text class="text" x="60" y="105">+ getInstance(): Authenticator</text>
+
+  <rect class="box" x="40" y="220" width="300" height="180" />
+  <text class="title" x="60" y="255">Virus</text>
+  <text class="text" x="60" y="285">+ name, type, age, weight</text>
+  <text class="text" x="60" y="310">+ children: Virus[]</text>
+  <text class="text" x="60" y="335">+ clone(): Virus</text>
+
+  <rect class="box" x="430" y="40" width="340" height="140" />
+  <text class="title" x="450" y="75">GameCharacter (interface)</text>
+  <text class="text" x="450" y="105">name, role, inventory, skills, alignment...</text>
+
+  <rect class="box" x="430" y="240" width="340" height="130" />
+  <text class="title" x="450" y="275">CharacterBuilder (interface)</text>
+  <text class="text" x="450" y="305">reset(), fluent setters, build()</text>
+
+  <rect class="box" x="860" y="220" width="300" height="110" />
+  <text class="title" x="880" y="255">HeroBuilder</text>
+  <text class="text" x="880" y="285">addGoodDeed(), protectCitizens()</text>
+
+  <rect class="box" x="860" y="360" width="300" height="110" />
+  <text class="title" x="880" y="395">EnemyBuilder</text>
+  <text class="text" x="880" y="425">addEvilDeed(), spreadChaos()</text>
+
+  <rect class="box" x="1240" y="280" width="320" height="130" />
+  <text class="title" x="1260" y="315">CharacterDirector</text>
+  <text class="text" x="1260" y="345">createDreamHero()</text>
+  <text class="text" x="1260" y="370">createMostDangerousEnemy()</text>
+
+  <path class="line dashed" d="M 860 260 L 770 285" />
+  <path class="line dashed" d="M 860 415 L 770 315" />
+  <path class="line" d="M 1000 220 L 680 180" />
+  <path class="line" d="M 1000 360 L 680 180" />
+  <path class="line" d="M 1240 320 L 1160 270" />
+  <path class="line" d="M 1240 360 L 1160 420" />
+  <path class="line" d="M 340 300 C 390 250, 390 370, 340 340" />
+</svg>

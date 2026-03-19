@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" modified="2026-03-19T10:13:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="patterns-page" name="Patterns">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="auth" value="Authenticator&#xa;+ getInstance(): Authenticator&#xa;- constructor(token)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="virus" value="Virus&#xa;+ name: string&#xa;+ type: string&#xa;+ age: number&#xa;+ weight: number&#xa;+ children: Virus[]&#xa;+ clone(): Virus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="280" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="gameCharacter" value="GameCharacter (interface)&#xa;+ name, gender, heightCm, ...&#xa;+ inventory: string[]&#xa;+ skills: string[]&#xa;+ alignment: Good|Evil" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="330" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="builderInterface" value="CharacterBuilder (interface)&#xa;+ reset(): this&#xa;+ fluent setters&#xa;+ build(): GameCharacter" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="330" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="heroBuilder" value="HeroBuilder&#xa;+ addGoodDeed(): this&#xa;+ protectCitizens(): this" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="860" y="220" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="enemyBuilder" value="EnemyBuilder&#xa;+ addEvilDeed(): this&#xa;+ spreadChaos(): this" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="860" y="360" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="director" value="CharacterDirector&#xa;+ createDreamHero()&#xa;+ createMostDangerousEnemy()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="280" width="300" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-virus-self" value="children" style="endArrow=open;html=1;curved=1;" edge="1" parent="1" source="virus" target="virus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="280" />
+              <mxPoint x="350" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-hero-interface" value="implements" style="endArrow=block;html=1;dashed=1;" edge="1" parent="1" source="heroBuilder" target="builderInterface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-enemy-interface" value="implements" style="endArrow=block;html=1;dashed=1;" edge="1" parent="1" source="enemyBuilder" target="builderInterface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-hero-character" value="builds" style="endArrow=open;html=1;" edge="1" parent="1" source="heroBuilder" target="gameCharacter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-enemy-character" value="builds" style="endArrow=open;html=1;" edge="1" parent="1" source="enemyBuilder" target="gameCharacter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-director-hero" value="uses" style="endArrow=open;html=1;" edge="1" parent="1" source="director" target="heroBuilder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-director-enemy" value="uses" style="endArrow=open;html=1;" edge="1" parent="1" source="director" target="enemyBuilder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
