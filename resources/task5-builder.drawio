@@ -1,0 +1,30 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Task 5 Builder">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="director" value="&lt;b&gt;CharacterDirector&lt;/b&gt;&lt;hr&gt;+ createHero(builder: HeroBuilder): GameCharacter&lt;br&gt;+ createEnemy(builder: EnemyBuilder): GameCharacter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="390" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="builder" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CharacterBuilder&lt;/b&gt;&lt;hr&gt;+ setName(name: string): this&lt;br&gt;+ setHeight(height: number): this&lt;br&gt;+ setBodyType(bodyType: string): this&lt;br&gt;+ setHairColor(hairColor: string): this&lt;br&gt;+ setEyeColor(eyeColor: string): this&lt;br&gt;+ setClothes(clothes: string): this&lt;br&gt;+ setWeapon(weapon: string): this&lt;br&gt;+ addInventoryItem(item: string): this&lt;br&gt;+ build(): GameCharacter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="410" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="hero" value="&lt;b&gt;HeroBuilder&lt;/b&gt;&lt;hr&gt;+ addGoodDeed(deed: string): this&lt;br&gt;+ build(): GameCharacter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="270" y="520" width="290" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="enemy" value="&lt;b&gt;EnemyBuilder&lt;/b&gt;&lt;hr&gt;+ addEvilDeed(deed: string): this&lt;br&gt;+ build(): GameCharacter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="640" y="520" width="290" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="character" value="&lt;b&gt;GameCharacter&lt;/b&gt;&lt;hr&gt;+ name: string&lt;br&gt;+ role: string&lt;br&gt;+ height: number&lt;br&gt;+ bodyType: string&lt;br&gt;+ hairColor: string&lt;br&gt;+ eyeColor: string&lt;br&gt;+ clothes: string&lt;br&gt;+ weapon: string&lt;br&gt;+ inventory: string[]&lt;br&gt;+ goodDeeds: string[]&lt;br&gt;+ evilDeeds: string[]&lt;hr&gt;+ describe(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="430" y="700" width="340" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="d1" value="uses" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="director" target="builder"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="h1" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="hero" target="builder"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e1" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="enemy" target="builder"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="h2" value="builds" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="hero" target="character"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="builds" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="enemy" target="character"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

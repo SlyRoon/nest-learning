@@ -1,0 +1,47 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Task 4 Prototype">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="virus" value="&lt;b&gt;Virus&lt;/b&gt;&lt;hr&gt;+ weight: number&lt;br&gt;+ age: number&lt;br&gt;+ name: string&lt;br&gt;+ type: string&lt;br&gt;+ children: Virus[]&lt;hr&gt;+ clone(): Virus&lt;br&gt;+ describe(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="420" y="50" width="310" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="originalTitle" value="Original family" style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="160" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="cloneTitle" value="Cloned family" style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="310" width="160" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="parentVirus" value="Parent virus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="360" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="childVirus" value="Child virus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="460" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="grandVirus" value="GrandChild virus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="560" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="clonedParent" value="Cloned parent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="360" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="clonedChild" value="Cloned child" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="460" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="clonedGrand" value="Cloned grandchild" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="560" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="children" value="children" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="virus" target="virus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="760" y="130"/><mxPoint x="760" y="210"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o1" value="child" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="parentVirus" target="childVirus"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="o2" value="child" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="childVirus" target="grandVirus"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c1" value="child" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="clonedParent" target="clonedChild"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="c2" value="child" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="clonedChild" target="clonedGrand"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="cloneEdge" value="clone()" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="parentVirus" target="clonedParent"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

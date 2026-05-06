@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Task 1 Factory Method" id="0">
+    <mxGraphModel dx="1414" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="creator" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SubscriptionCreator&lt;/b&gt;&lt;hr&gt;+ purchase(type: SubscriptionType): ISubscription&lt;br&gt;# validate(type: SubscriptionType): void&lt;br&gt;# postProcess(sub: ISubscription): ISubscription&lt;br&gt;# createSubscription(type: SubscriptionType): ISubscription" vertex="1">
+          <mxGeometry height="150" width="360" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="website" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;WebSiteCreator&lt;/b&gt;&lt;hr&gt;# createSubscription(type: SubscriptionType): ISubscription" vertex="1">
+          <mxGeometry height="80" width="230" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;MobileAppCreator&lt;/b&gt;&lt;hr&gt;# createSubscription(type: SubscriptionType): ISubscription" vertex="1">
+          <mxGeometry height="80" width="230" x="290" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;ManagerCallCreator&lt;/b&gt;&lt;hr&gt;# createSubscription(type: SubscriptionType): ISubscription" vertex="1">
+          <mxGeometry height="80" width="230" x="540" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="subinterface" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;ISubscription&lt;/b&gt;&lt;hr&gt;+ monthlyFee: number&lt;br&gt;+ minPeriodMonths: number&lt;br&gt;+ channels: string[]&lt;br&gt;+ describe(): string" vertex="1">
+          <mxGeometry height="130" width="300" x="760" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="domestic" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;DomesticSubscription&lt;/b&gt;&lt;hr&gt;+ describe(): string" vertex="1">
+          <mxGeometry height="80" width="210" x="720" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="educational" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;EducationalSubscription&lt;/b&gt;&lt;hr&gt;+ describe(): string" vertex="1">
+          <mxGeometry height="80" width="210" x="950" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="premium" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;b&gt;PremiumSubscription&lt;/b&gt;&lt;hr&gt;+ describe(): string" vertex="1">
+          <mxGeometry height="80" width="210" x="835" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="enum" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SubscriptionType&lt;/b&gt;&lt;hr&gt;Domestic&lt;br&gt;Educational&lt;br&gt;Premium" vertex="1">
+          <mxGeometry height="120" width="210" x="530" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="website" style="endArrow=block;endFill=0;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="creator" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="mobile" style="endArrow=block;endFill=0;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="creator" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="manager" style="endArrow=block;endFill=0;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="creator" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="domestic" style="endArrow=block;endFill=0;endFill=0;dashed=1;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="subinterface" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="educational" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="subinterface" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="premium" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="subinterface" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="creator" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="enum" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="creator" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" target="subinterface" value="returns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Task 2 Abstract Factory">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="tech" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TechFactory&lt;/b&gt;&lt;hr&gt;+ brand: Brand&lt;br&gt;+ createLaptop(): ILaptop&lt;br&gt;+ createNetBook(): INetbook&lt;br&gt;+ createEbook(): IEbook&lt;br&gt;+ createSmartPhone(): ISmartPhone" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="330" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="registry" value="&lt;b&gt;TechFactoryRegistry&lt;/b&gt;&lt;hr&gt;+ getFactory(brand: Brand): TechFactory" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="brand" value="&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;hr&gt;IProne&lt;br&gt;Balaxy&lt;br&gt;Kiaomi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="180" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="iproneFactory" value="&lt;b&gt;IproneFactory&lt;/b&gt;&lt;hr&gt;+ createLaptop()&lt;br&gt;+ createNetBook()&lt;br&gt;+ createEbook()&lt;br&gt;+ createSmartPhone()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="420" y="260" width="250" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="iaomiFactory" value="&lt;b&gt;KiaomiFactory&lt;/b&gt;&lt;hr&gt;+ createLaptop()&lt;br&gt;+ createNetBook()&lt;br&gt;+ createEbook()&lt;br&gt;+ createSmartPhone()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="700" y="260" width="250" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="balaxyFactory" value="&lt;b&gt;BalaxyFactory&lt;/b&gt;&lt;hr&gt;+ createLaptop()&lt;br&gt;+ createNetBook()&lt;br&gt;+ createEbook()&lt;br&gt;+ createSmartPhone()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="260" width="250" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="ilaptop" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;ILaptop&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="190" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="inetbook" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;INetbook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="550" width="190" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="iebook" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;IEbook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="650" width="190" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="ismart" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;ISmartPhone&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="750" width="190" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="iproneLaptop" value="&lt;b&gt;IproneLaptop&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="420" y="450" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iproneNetBook" value="&lt;b&gt;IproneNetBook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="420" y="550" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iproneEbook" value="&lt;b&gt;IproneEbook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="420" y="650" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iproneSmart" value="&lt;b&gt;IproneSmartPhone&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="420" y="750" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iaomiLaptop" value="&lt;b&gt;KiaomiLaptop&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="700" y="450" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iaomiNetBook" value="&lt;b&gt;KiaomiNetBook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="700" y="550" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iaomiEbook" value="&lt;b&gt;KiaomiEbook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="700" y="650" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="iaomiSmart" value="&lt;b&gt;KiaomiSmartPhone&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="700" y="750" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="balaxyLaptop" value="&lt;b&gt;BalaxyLaptop&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="450" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="balaxyNetBook" value="&lt;b&gt;BalaxyNetBook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="550" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="balaxyEbook" value="&lt;b&gt;BalaxyEbook&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="650" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="balaxySmart" value="&lt;b&gt;BalaxySmartPhone&lt;/b&gt;&lt;hr&gt;+ getInfo(): string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="750" width="250" height="70" as="geometry"/></mxCell>
+        <mxCell id="f1" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneFactory" target="tech"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="f2" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iaomiFactory" target="tech"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="f3" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="balaxyFactory" target="tech"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="r1" value="uses" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="registry" target="brand"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="r2" value="returns" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="registry" target="tech"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b1" value="creates" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneFactory" target="iproneLaptop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b2" value="creates" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iaomiFactory" target="iaomiLaptop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b3" value="creates" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="balaxyFactory" target="balaxyLaptop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="l1" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneLaptop" target="ilaptop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="l2" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneNetBook" target="inetbook"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="l3" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneEbook" target="iebook"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="l4" value="" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="iproneSmart" target="ismart"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
